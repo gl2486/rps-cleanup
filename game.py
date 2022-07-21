@@ -4,13 +4,19 @@
 
 from random import choice
 
+# why remove duplication?
+# so in future we only need to update the code in one place
+# so we won't forget to update code in all the place
+
+valid_choices = ['rock', 'paper', 'scissors']
+
 #
 # USER SELECTION
 #
 
 u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
 print("USER CHOICE:", u)
-if u not in ["rock", "paper", "scissors"]:
+if u not in valid_choices:
     print("OOPS, TRY AGAIN")
     exit()
 
@@ -18,7 +24,7 @@ if u not in ["rock", "paper", "scissors"]:
 # COMPUTER SELECTION
 #
 
-c = choice(["rock", "paper", "scissors"])
+c = choice([valid_choices])
 print("COMPUTER CHOICE:", c)
 
 #
